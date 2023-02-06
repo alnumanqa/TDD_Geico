@@ -30,6 +30,7 @@ public class ReadProperties {
 		}
 
 	}
+
 	public long getNumProperties(String key) {
 		String value = getProperties(key);
 		if (value != null) {
@@ -38,9 +39,8 @@ public class ReadProperties {
 		} else {
 			return 0;
 		}
-		
+
 	}
-	
 
 	// Unit test of my code
 
