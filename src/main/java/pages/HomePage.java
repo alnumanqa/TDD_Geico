@@ -20,6 +20,8 @@ public class HomePage {
 	WebElement goBtn;
 	@FindBy(xpath = "(//div[@class='product-checkbox'])[1]")
 	WebElement autoLOB;
+	@FindBy(xpath = "(//div[@class='product-checkbox'])[3]")
+	WebElement rentersLOB;
 	@FindBy(xpath = "//a[text()='Start My Quote']")
 	WebElement starMyQuoteBtn;
 	@FindBy(css = "input.btn.btn--primary.btn--full-mobile")
@@ -40,6 +42,9 @@ public class HomePage {
 	
 	public void selectAutoLOB() {
 		click(autoLOB);
+	}
+	public void selectRentersLOB() {
+		click(rentersLOB);
 	}
 	
 	public void clickStartMyQuote() {
