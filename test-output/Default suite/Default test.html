@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 03 14:25:03 EST 2023</td>
+<td>Started on:</td><td>Tue Feb 07 11:41:52 EST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>3 seconds (3082 ms)</td>
+<tr><td>Total time:</td><td>40 seconds (40014 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,10 +76,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.AutoTest.sampleTeat()'><b>sampleTeat</b><br>Test class: test.AutoTest</td>
+<td title='test.LoginPageTest.loginTest()'><b>loginTest</b><br>Test class: test.LoginPageTest<br/>
+<a href="#Output-918730310" onClick='toggleBox("Output-918730310", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-918730310" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-918730310">
+[[ChromeDriver: chrome on WINDOWS (4598f8babb471a89b1b35dade9f3fea8)] -> xpath: //span[text()='Log In']//parent::a]---------> has been clicked<br><br/>
+14215 <--- This value has been passed into ---> [[ChromeDriver: chrome on WINDOWS (4598f8babb471a89b1b35dade9f3fea8)] -> xpath: //span[text()='Log In']//parent::a]<br><br/>
+Proxy element for: DefaultElementLocator 'By.xpath: (//button[@id='manageSubmit'])[1]'---------> has been clicked<br><br/>
+</div>
+</td>
 <td></td>
-<td>0</td>
-<td>test.AutoTest@79e4c792</td></tr>
+<td>17</td>
+<td>test.LoginPageTest@28261e8e</td></tr>
+<tr>
+<td title='test.LoginPageTest.userDataInput()'><b>userDataInput</b><br>Test class: test.LoginPageTest<br/>
+<a href="#Output-850429804" onClick='toggleBox("Output-850429804", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-850429804" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-850429804">
+[[ChromeDriver: chrome on WINDOWS (0880ff6db196f7bfc8700f1b8126f8bb)] -> xpath: //span[text()='Log In']//parent::a]---------> has been clicked<br><br/>
+14215 <--- This value has been passed into ---> [[ChromeDriver: chrome on WINDOWS (0880ff6db196f7bfc8700f1b8126f8bb)] -> xpath: //span[text()='Log In']//parent::a]<br><br/>
+Proxy element for: DefaultElementLocator 'By.xpath: (//button[@id='manageSubmit'])[1]'---------> has been clicked<br><br/>
+numan <--- This value has been passed into ---> [[ChromeDriver: chrome on WINDOWS (0880ff6db196f7bfc8700f1b8126f8bb)] -> xpath: //input[@id='TextInputComponent-1']]<br><br/>
+1234 <--- This value has been passed into ---> [[ChromeDriver: chrome on WINDOWS (0880ff6db196f7bfc8700f1b8126f8bb)] -> xpath: //input[@id='TextInputComponent-2']]<br><br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>test.LoginPageTest@28261e8e</td></tr>
 </table><p>
 </body>
 </html>

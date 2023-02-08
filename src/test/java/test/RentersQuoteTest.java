@@ -5,7 +5,7 @@ import base.BaseClass;
 
 public class RentersQuoteTest extends BaseClass {
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void rentersQutoeTest() throws InterruptedException {
 		homePage.verifyHomepageTitle("The Insurance Savings You Expect");
 		homePage.insertZipcode("14215");
@@ -29,8 +29,7 @@ public class RentersQuoteTest extends BaseClass {
 //		Thread.sleep(2000);
 //		rayp.insertZipcode("14215");
 //		Thread.sleep(2000);
-//		rayp.clickNextBtn(driver);
-//		
+//		rayp.clickNextBtn(driver);		
 	}
 
 }
