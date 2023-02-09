@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 import static utils.Iconstant.*;
 import java.time.Duration;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -30,9 +31,11 @@ public class BaseClass {
 		//envVar = new ReadProperties();
 	}
 
+	@Parameters("browser")	
 	@BeforeMethod
-	public void setUpDriver() {
-		initDriver(envVar.getProperties(BROWSER));
+	public void setUpDriver(String browserName) {
+		//initDriver(envVar.getProperties(BROWSER));
+		initDriver(browserName);
 		initClasses(driver);
 		driver.get(envVar.getProperties(URL));
 		long pageloadWait = envVar.getNumProperties(PAGELOAD_WAIT);
