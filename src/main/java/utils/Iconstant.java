@@ -11,5 +11,9 @@ public interface Iconstant {
 	String EXPLICIT_WAIT = "explicitWait";
 	String IMPLICIT_WAIT = "implicitilyWait";
 	String PAGELOAD_WAIT = "pageloadtime";
+	
+	String PASSED = "Test PASSED";
+	String FAILED = "Test FAILED";
+	String SKIPPED = "Test SKIPPED";
 
 }

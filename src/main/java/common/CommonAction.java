@@ -25,6 +25,7 @@ public class CommonAction {
 			Logs.log(element + "---------> Element not Found");
 			Assert.fail();
 		}
+		Assert.assertEquals(actual, expected);
 	}
 
 	public static void insert(WebElement element, String value) {
