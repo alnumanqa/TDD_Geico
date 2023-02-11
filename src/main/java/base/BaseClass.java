@@ -4,11 +4,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
+
+import com.aventstack.extentreports.Status;
+
 import static utils.Iconstant.*;
+
+import java.lang.reflect.Method;
 import java.time.Duration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.AboutYouPage;
@@ -17,7 +22,7 @@ import pages.LoginPage;
 import pages.RentersAboutYouPage;
 import utils.ReadProperties;
 
-public class BaseClass {
+public class BaseClass extends ExtentListner {
 
 	public WebDriver driver;
 	ReadProperties envVar = new ReadProperties();;
@@ -26,15 +31,10 @@ public class BaseClass {
 	protected RentersAboutYouPage rayp;
 	public LoginPage loginPage;
 
-	@BeforeSuite
-	public void setUpSuit() {
-		//envVar = new ReadProperties();
-	}
-
-	@Parameters("browser")	
+	@Parameters("browser")
 	@BeforeMethod
 	public void setUpDriver(String browserName) {
-		//initDriver(envVar.getProperties(BROWSER));
+		// initDriver(envVar.getProperties(BROWSER));
 		initDriver(browserName);
 		initClasses(driver);
 		driver.get(envVar.getProperties(URL));
@@ -79,5 +79,18 @@ public class BaseClass {
 	public void tearUp() {
 		driver.quit();
 	}
+	@AfterMethod
+	public void getResult(ITestResult result, Method method) {
+		if(result.getStatus() == ITestResult.SUCCESS) {
+			test.log(Status.PASS, PASSED);
+		}else if(result.getStatus() == ITestResult.FAILURE) {
+			test.log(Status.FAIL, FAILED);
+			test.addScreenCaptureFromPath(captureScreenShot(driver, method.getName()));
+		}else if(result.getStatus() == ITestResult.SKIP) {
+			test.log(Status.SKIP, SKIPPED);
+		}
+	}
+
+	
 
 }
