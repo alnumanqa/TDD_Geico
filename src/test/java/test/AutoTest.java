@@ -5,10 +5,8 @@ import base.BaseClass;
 
 public class AutoTest extends BaseClass {
 
-	
 	@Test(enabled = true, groups = { "auto", "non-functional" })
-	public void autoQuoteTest()
-			throws InterruptedException {
+	public void autoQuoteTest() throws InterruptedException {
 		homePage.verifyHomepageTitle("The Insurance Savings You Expect");
 		homePage.insertZipcode("14215");
 		homePage.clickGoBtn();
@@ -17,10 +15,10 @@ public class AutoTest extends BaseClass {
 		homePage.clickCoutinueBtn();
 		aboutYouPage.verifyAboutYouPageTitle("Let’s get started.");
 		aboutYouPage.insertDOB("02271995");
-//		aboutYouPage.clickNextBtn();
-//		aboutYouPage.insertFirstName("Al");
-//		aboutYouPage.insertlasttName("Numan");
-//		aboutYouPage.clickNextBtn();
+		aboutYouPage.clickNextBtn();
+		aboutYouPage.insertFirstName("Al");
+		aboutYouPage.insertlasttName("Numan");
+		aboutYouPage.clickNextBtn();
 
 	}
 

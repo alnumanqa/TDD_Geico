@@ -28,8 +28,14 @@ public class CommonAction {
 	}
 
 	public static void insert(WebElement element, String value) {
-		element.sendKeys(value);
-		Logs.log(value + " <--- This value has been passed into ---> " + element);
+		try {
+			element.sendKeys(value);
+			Logs.log(value + " <--- This value has been passed into ---> " + element);
+		} catch (NullPointerException | NoSuchElementException e) {
+			Logs.log(element + "---------> Element not Found");
+			Assert.fail();
+		}
+
 	}
 
 }
