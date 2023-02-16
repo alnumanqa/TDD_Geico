@@ -5,7 +5,7 @@
 	<test name="chrome">
 		<classes>
 			<!--class name="test.RentersQuoteTest"/-->
-			<class name="test.AutoTest" />
+			<class name="test.LoginPageTest" />
 			<!--class name="test.LoginPageTest"/-->
 		</classes>
 	</test> <!-- Test -->
@@ -13,7 +13,7 @@
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<!--class name="test.RentersQuoteTest"/-->
-			<class name="test.AutoTest" />
+			<class name="test.LoginPageTest" />
 			<!--class name="test.LoginPageTest"/-->
 		</classes>
 	</test> <!-- Test -->
@@ -21,7 +21,7 @@
 		<parameter name="browser" value="edge"></parameter>
 		<classes>
 			<!--class name="test.RentersQuoteTest"/-->
-			<class name="test.AutoTest" />
+			<class name="test.LoginPageTest" />
 			<!--class name="test.LoginPageTest"/-->
 		</classes>
 	</test> <!-- Test -->

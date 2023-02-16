@@ -7,7 +7,7 @@ import reporting.Logs;
 
 public class LoginPageTest extends BaseClass {
 
-	@Test(enabled = false, priority = 1, groups = { "login", "non-functional" })
+	@Test(enabled = true, priority = 1, groups = { "login", "non-functional" })
 	public void loginTest() throws InterruptedException {
 		loginPage.clickLoginBtn01();
 		loginPage.inputZipcode("14215");
@@ -38,7 +38,7 @@ public class LoginPageTest extends BaseClass {
 		Assert.fail();
 	}
 
-	@Test(enabled = true, invocationCount = 2)
+	@Test(enabled = false, invocationCount = 2)
 	public void mockTest01() {
 		Logs.log("MockTest01");
 	}
